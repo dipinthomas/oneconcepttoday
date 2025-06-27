@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>One Concept Today - Learn Kubernetes</title>
+    <meta name="description" content="Learn Kubernetes concepts through interactive flashcards">
+    <meta name="author" content="One Concept Today">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <h1 class="logo">
+                    <i class="fas fa-lightbulb"></i>
+                    One Concept Today
+                </h1>
+                <nav class="nav-menu">
+                    <a href="#" onclick="showHome()" class="nav-link">Home</a>
+                    <a href="#" onclick="showAbout()" class="nav-link">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Home Page -->
+            <div id="home-page" class="page active">
+                <div class="hero">
+                    <h2 class="hero-title">Master Kubernetes Concepts</h2>
+                    <p class="hero-subtitle">Learn container orchestration with interactive flashcards covering essential Kubernetes topics</p>
+                </div>
+                
+                <div class="topics-grid" id="topics-grid">
+                    <!-- Topics will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Difficulty Selection Page -->
+            <div id="difficulty-page" class="page">
+                <div class="topic-header">
+                    <button onclick="showHome()" class="back-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Topics
+                    </button>
+                    <h2 id="difficulty-title">Choose Your Level</h2>
+                </div>
+                
+                <div class="difficulty-sections">
+                    <div class="difficulty-card" onclick="showTopic('kubernetes', 'basic')">
+                        <div class="difficulty-header">
+                            <i class="fas fa-seedling"></i>
+                            <h3>Basic</h3>
+                        </div>
+                        <p>Essential Kubernetes concepts for beginners</p>
+                        <ul class="topic-list">
+                            <li>• Pods and Services</li>
+                            <li>• kubectl basics</li>
+                            <li>• Namespaces</li>
+                            <li>• Basic concepts</li>
+                        </ul>
+                        <button class="start-btn">Start Learning</button>
+                    </div>
+                    
+                    <div class="difficulty-card" onclick="showTopic('kubernetes', 'intermediate')">
+                        <div class="difficulty-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Intermediate</h3>
+                        </div>
+                        <p>Advanced deployment and configuration concepts</p>
+                        <ul class="topic-list">
+                            <li>• Deployments & ReplicaSets</li>
+                            <li>• ConfigMaps & Storage</li>
+                            <li>• Ingress Controllers</li>
+                            <li>• Rolling Updates</li>
+                        </ul>
+                        <button class="start-btn">Start Learning</button>
+                    </div>
+                    
+                    <div class="difficulty-card" onclick="showTopic('kubernetes', 'advanced')">
+                        <div class="difficulty-header">
+                            <i class="fas fa-crown"></i>
+                            <h3>Advanced</h3>
+                        </div>
+                        <p>Expert-level Kubernetes administration and troubleshooting</p>
+                        <ul class="topic-list">
+                            <li>• RBAC & Security</li>
+                            <li>• Custom Resources</li>
+                            <li>• Network Policies</li>
+                            <li>• Troubleshooting</li>
+                        </ul>
+                        <button class="start-btn">Start Learning</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic Page -->
+            <div id="topic-page" class="page">
+                <div class="topic-header">
+                    <button onclick="showHome()" class="back-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Topics
+                    </button>
+                    <h2 id="topic-title">Topic</h2>
+                </div>
+                
+                <div class="topic-content">
+                    <div class="flashcard-container">
+                        <div class="flashcard" id="flashcard">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <div class="card-content">
+                                        <button class="surprise-btn" onclick="getRandomFlashcard()">
+                                            <i class="fas fa-dharmachakra"></i>
+                                            <span class="btn-text">Surprise Me</span>
+                                            <small class="btn-subtitle">Click to get a random Kubernetes question</small>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flashcard-back">
+                                    <div class="card-content">
+                                        <div class="question-section">
+                                            <h4>Question:</h4>
+                                            <p id="question-text"></p>
+                                        </div>
+                                        <div class="options-section" id="options-section" style="display: none;">
+                                            <h4>Choose the correct answer:</h4>
+                                            <div class="options-container" id="options-container">
+                                                <!-- Options will be dynamically added here -->
+                                            </div>
+                                        </div>
+                                        <div class="answer-section" id="answer-section" style="display: none;">
+                                            <h4>Answer:</h4>
+                                            <p id="answer-text"></p>
+                                        </div>
+                                        <div class="explanation-section" id="explanation-section" style="display: none;">
+                                            <h4>Explanation:</h4>
+                                            <p id="explanation-text"></p>
+                                            <div class="reference-section" id="reference-section" style="display: none;">
+                                                <a id="reference-link" href="#" target="_blank" class="reference-link">
+                                                    <i class="fas fa-external-link-alt"></i> Learn More
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-actions">
+                                            <button class="reveal-btn" id="reveal-btn" onclick="revealAnswer()">
+                                                <i class="fas fa-eye"></i> Reveal Answer
+                                            </button>
+                                            <button class="new-question-btn" onclick="getRandomFlashcard()" style="display: none;" id="new-question-btn">
+                                                <i class="fas fa-refresh"></i> New Question
+                                            </button>
+                                            <button class="flip-back-btn" onclick="flipToFront()">
+                                                <i class="fas fa-undo"></i> Start Over
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Page -->
+            <div id="about-page" class="page">
+                <div class="about-content">
+                    <h2>About Kubernetes Learning Platform</h2>
+                    <p>Master Kubernetes concepts through interactive flashcards designed specifically for container orchestration learning. Our platform makes complex Kubernetes topics accessible and engaging.</p>
+                    
+                    <h3>How it works:</h3>
+                    <ol>
+                        <li>Click "Start Learning" to begin your Kubernetes journey</li>
+                        <li>Click "Surprise Me" to get a random Kubernetes question</li>
+                        <li>Choose from multiple choice answers</li>
+                        <li>Get instant feedback on your selection</li>
+                        <li>Read detailed explanations with official documentation links</li>
+                        <li>Continue learning with new questions</li>
+                    </ol>
+                    
+                    <h3>Kubernetes Topics Covered:</h3>
+                    <ul>
+                        <li><strong>Pods</strong> - The smallest deployable units</li>
+                        <li><strong>Services</strong> - Network access and load balancing</li>
+                        <li><strong>Deployments</strong> - Managing application rollouts</li>
+                        <li><strong>ReplicaSets</strong> - Ensuring pod availability</li>
+                        <li><strong>ConfigMaps & Secrets</strong> - Configuration management</li>
+                        <li><strong>Namespaces</strong> - Resource isolation</li>
+                        <li><strong>Ingress</strong> - External access management</li>
+                        <li><strong>StatefulSets & DaemonSets</strong> - Specialized workloads</li>
+                        <li><strong>Persistent Volumes</strong> - Storage management</li>
+                        <li><strong>kubectl</strong> - Command-line operations</li>
+                    </ul>
+                    
+                    <h3>Why Choose This Platform?</h3>
+                    <ul>
+                        <li>🎯 <strong>Focused Learning</strong> - Dedicated to Kubernetes concepts</li>
+                        <li>📚 <strong>Official Documentation</strong> - Links to kubernetes.io resources</li>
+                        <li>🔄 <strong>Interactive Practice</strong> - Multiple choice questions with instant feedback</li>
+                        <li>⌨️ <strong>Keyboard Shortcuts</strong> - Efficient navigation (1-3, Space, R, Escape)</li>
+                        <li>📱 <strong>Mobile Friendly</strong> - Learn anywhere on any device</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

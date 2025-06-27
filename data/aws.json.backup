@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is Amazon EC2?",
+    "answer": "Amazon Elastic Compute Cloud (EC2) provides scalable computing capacity in the AWS cloud, allowing you to launch virtual servers.",
+    "explanation": "EC2 eliminates the need to invest in hardware upfront. You can launch as many virtual servers as you need, configure security and networking, and manage storage. EC2 offers various instance types optimized for different use cases."
+  },
+  {
+    "question": "What is the difference between S3 and EBS?",
+    "answer": "S3 is object storage accessible via REST API, while EBS provides block-level storage volumes for EC2 instances.",
+    "explanation": "S3 is designed for storing files, documents, and media accessible from anywhere on the internet. EBS provides persistent block storage for EC2 instances, similar to a traditional hard drive that can be attached to virtual machines."
+  },
+  {
+    "question": "What is AWS Lambda?",
+    "answer": "AWS Lambda is a serverless computing service that runs code in response to events without managing servers.",
+    "explanation": "Lambda automatically manages the computing resources for you, scaling from a few requests per day to thousands per second. You only pay for the compute time you consume, making it cost-effective for sporadic workloads."
+  },
+  {
+    "question": "What is Amazon VPC?",
+    "answer": "Virtual Private Cloud (VPC) lets you provision a logically isolated section of AWS where you can launch resources in a virtual network.",
+    "explanation": "VPC gives you complete control over your virtual networking environment including IP address range selection, creation of subnets, and configuration of route tables and network gateways."
+  },
+  {
+    "question": "What is AWS IAM?",
+    "answer": "Identity and Access Management (IAM) enables you to securely control access to AWS services and resources.",
+    "explanation": "IAM allows you to create and manage AWS users and groups and use permissions to allow and deny their access to AWS resources. It's essential for security and follows the principle of least privilege."
+  },
+  {
+    "question": "What is Amazon RDS?",
+    "answer": "Relational Database Service (RDS) makes it easier to set up, operate, and scale relational databases in the cloud.",
+    "explanation": "RDS handles routine database tasks such as provisioning, patching, backup, recovery, failure detection, and repair. It supports multiple database engines including MySQL, PostgreSQL, Oracle, and SQL Server."
+  },
+  {
+    "question": "What is the difference between Availability Zones and Regions?",
+    "answer": "A Region is a physical location with multiple Availability Zones. An Availability Zone is one or more discrete data centers with redundant power and networking.",
+    "explanation": "Regions are completely independent and help achieve the greatest possible fault tolerance. Availability Zones within a region are connected through low-latency links and enable you to operate production applications that are more highly available than from a single data center."
+  },
+  {
+    "question": "What is Amazon CloudFront?",
+    "answer": "CloudFront is a content delivery network (CDN) that securely delivers data, videos, applications, and APIs globally with low latency.",
+    "explanation": "CloudFront speeds up distribution of your content by caching it at edge locations closest to your users. This reduces latency and provides better performance for your web applications."
+  }
+]

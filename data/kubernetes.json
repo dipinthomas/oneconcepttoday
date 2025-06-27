@@ -1,0 +1,194 @@
+[
+  {
+    "question": "What is a Kubernetes Pod?",
+    "options": [
+      "A virtual machine managed by Kubernetes",
+      "The smallest deployable unit in Kubernetes", 
+      "A container image stored in Docker Hub"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A Pod is the smallest deployable unit in Kubernetes and can host one or more containers that share resources.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/pods/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is kubectl?",
+    "options": [
+      "A Kubernetes container runtime",
+      "The command-line tool for interacting with Kubernetes",
+      "A type of Kubernetes storage"
+    ],
+    "correct_option_index": 1,
+    "explanation": "kubectl is the command-line tool that allows you to run commands against Kubernetes clusters.",
+    "reference_url": "https://kubernetes.io/docs/reference/kubectl/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is the purpose of a Kubernetes Service?",
+    "options": [
+      "To store configuration data",
+      "To provide persistent storage",
+      "To expose pods to network traffic"
+    ],
+    "correct_option_index": 2,
+    "explanation": "A Service provides a stable way to expose pods to network traffic, enabling load balancing and service discovery.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/service/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "Which file format is commonly used for Kubernetes manifests?",
+    "options": [
+      "JSON only",
+      "XML only", 
+      "YAML or JSON"
+    ],
+    "correct_option_index": 2,
+    "explanation": "Kubernetes manifests can be written in both YAML and JSON formats, though YAML is more commonly used.",
+    "reference_url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a Kubernetes Namespace?",
+    "options": [
+      "A way to organize and isolate resources",
+      "A type of container runtime",
+      "A storage volume type"
+    ],
+    "correct_option_index": 0,
+    "explanation": "Namespaces provide a way to organize and isolate resources within a Kubernetes cluster.",
+    "reference_url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "Which controller ensures that the desired number of pod replicas are running?",
+    "options": [
+      "Service",
+      "ReplicaSet",
+      "Ingress"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A ReplicaSet ensures that a specified number of pod replicas are running at any given time.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is the difference between a Deployment and a ReplicaSet?",
+    "options": [
+      "There is no difference",
+      "Deployment provides declarative updates and manages ReplicaSets",
+      "ReplicaSet is newer than Deployment"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A Deployment provides declarative updates for pods and ReplicaSets, managing rolling updates and rollbacks.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is a ConfigMap used for?",
+    "options": [
+      "Storing sensitive data like passwords",
+      "Storing non-sensitive configuration data",
+      "Managing network policies"
+    ],
+    "correct_option_index": 1,
+    "explanation": "ConfigMaps are used to store non-sensitive configuration data in key-value pairs that can be consumed by pods.",
+    "reference_url": "https://kubernetes.io/docs/concepts/configuration/configmap/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "How does Kubernetes handle rolling updates?",
+    "options": [
+      "By stopping all pods at once",
+      "By gradually replacing old pods with new ones",
+      "By creating a completely new cluster"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Kubernetes rolling updates gradually replace old pods with new ones, ensuring zero-downtime deployments.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is an Ingress in Kubernetes?",
+    "options": [
+      "A type of storage volume",
+      "An API object that manages external access to services",
+      "A container runtime"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Ingress is an API object that manages external access to services in a cluster, typically HTTP/HTTPS traffic.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/ingress/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is the purpose of a PersistentVolume (PV)?",
+    "options": [
+      "To provide temporary storage",
+      "To provide persistent storage independent of pod lifecycle",
+      "To store container images"
+    ],
+    "correct_option_index": 1,
+    "explanation": "PersistentVolumes provide persistent storage that exists independently of any individual pod's lifecycle.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "How do you implement Role-Based Access Control (RBAC) in Kubernetes?",
+    "options": [
+      "Using Roles, RoleBindings, ClusterRoles, and ClusterRoleBindings",
+      "Using only ConfigMaps",
+      "Using only Secrets"
+    ],
+    "correct_option_index": 0,
+    "explanation": "RBAC in Kubernetes is implemented using Roles, RoleBindings, ClusterRoles, and ClusterRoleBindings to control access to resources.",
+    "reference_url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is a Custom Resource Definition (CRD)?",
+    "options": [
+      "A way to extend Kubernetes API with custom resources",
+      "A type of storage class",
+      "A networking plugin"
+    ],
+    "correct_option_index": 0,
+    "explanation": "CRDs allow you to extend the Kubernetes API by defining custom resources specific to your application needs.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do Network Policies work in Kubernetes?",
+    "options": [
+      "They automatically secure all traffic",
+      "They define rules for pod-to-pod communication",
+      "They only work with specific CNI plugins"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Network Policies define rules for how pods can communicate with each other and other network endpoints, requiring a compatible CNI plugin.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the purpose of a DaemonSet?",
+    "options": [
+      "To run a copy of a pod on all (or some) nodes",
+      "To manage secrets across the cluster",
+      "To handle load balancing"
+    ],
+    "correct_option_index": 0,
+    "explanation": "A DaemonSet ensures that all (or some) nodes run a copy of a pod, typically used for cluster-level services like logging or monitoring.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you troubleshoot a pod that's in CrashLoopBackOff state?",
+    "options": [
+      "Delete and recreate the pod",
+      "Check logs, resource limits, and container configuration",
+      "Restart the entire cluster"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Troubleshooting CrashLoopBackOff involves checking pod logs, resource limits, container configuration, and underlying issues causing the crashes.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/debug-pods-replication-controllers/",
+    "difficulty": "advanced"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "one-concept-today",
+  "version": "1.0.0",
+  "description": "Interactive educational portal for learning technology concepts through flashcards",
+  "main": "frontend/index.html",
+  "scripts": {
+    "start-backend": "cd backend && python app.py",
+    "install-backend": "cd backend && pip install -r requirements.txt",
+    "dev": "cd backend && python app.py",
+    "serve-frontend": "cd frontend && python -m http.server 8080",
+    "setup": "cd backend && pip install -r requirements.txt"
+  },
+  "keywords": [
+    "education",
+    "flashcards",
+    "learning",
+    "technology",
+    "kubernetes",
+    "aws",
+    "flask",
+    "javascript"
+  ],
+  "author": "One Concept Today Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/one-concept-today.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/one-concept-today/issues"
+  },
+  "homepage": "https://oneconcepttoday.online"
+}

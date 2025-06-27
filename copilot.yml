@@ -1,0 +1,61 @@
+name: One Concept Today
+description: >
+  Build an educational website hosted on oneconcepttoday.online with flashcard-based topic learning.
+
+  The project includes:
+    - A homepage that lists available topics (e.g., AWS, Kubernetes)
+    - Topic-specific pages like /kubernetes or /aws
+    - A Flashcard interface that:
+        - Displays a question with 3 multiple-choice options
+        - User selects one option
+        - Shows whether the answer is correct
+        - Reveals an explanation and links to a public reference for learning
+    - Content is loaded from a JSON file (e.g., kubernetes.json)
+    - Deployed on an EC2 instance using Flask backend + static frontend
+
+frontend:
+  stack: HTML, CSS, JavaScript (or React)
+  features:
+    - Homepage with links to topics
+    - Flashcard UI with:
+        - "Surprise Me" button to load a new question
+        - Display of 3 answer options as buttons
+        - Feedback after selection (✅/❌)
+        - Explanation and public reference shown on answer reveal
+
+backend:
+  language: Python
+  framework: Flask
+  features:
+    - API endpoint: `/api/flashcard/<topic>` that returns a random flashcard
+    - Reads from JSON file (e.g., data/kubernetes.json)
+    - Each flashcard includes:
+        - question: string
+        - options: array of 3 strings
+        - correct_option_index: 0-based index (int)
+        - explanation: string
+        - reference_url: string
+
+data_format:
+  location: `/data/<topic>.json`
+  schema:
+    [
+      {
+        "question": "What is a Kubernetes Pod?",
+        "options": [
+          "A virtual machine managed by Kubernetes",
+          "The smallest deployable unit in Kubernetes",
+          "A container image stored in Docker Hub"
+        ],
+        "correct_option_index": 1,
+        "explanation": "A Pod is the smallest deployable unit that can run a container in Kubernetes.",
+        "reference_url": "https://kubernetes.io/docs/concepts/workloads/pods/"
+      }
+    ]
+
+deployment:
+  - Runs on EC2 with NGINX reverse proxy + Gunicorn for Flask
+  - Folder structure:
+      - /frontend (HTML/CSS/JS or React app)
+      - /backend (Flask APIs)
+      - /data (topic-specific JSONs)

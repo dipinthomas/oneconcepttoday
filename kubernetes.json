@@ -1,0 +1,24 @@
+[
+  {
+    "question": "What is a Kubernetes Pod?",
+    "options": [
+      "A virtual machine managed by Kubernetes",
+      "The smallest deployable unit in Kubernetes",
+      "A container image stored in Docker Hub"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A Pod is the smallest deployable unit in Kubernetes and can host one or more containers that share resources.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/pods/"
+  },
+  {
+    "question": "Which controller ensures that the desired number of pod replicas are running?",
+    "options": [
+      "Service",
+      "ReplicaSet",
+      "Ingress"
+    ],
+    "correct_option_index": 1,
+    "explanation": "ReplicaSet maintains a stable set of replica Pods running at any given time.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/"
+  }
+]
