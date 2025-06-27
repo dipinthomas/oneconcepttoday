@@ -67,3 +67,11 @@ npm-debug.log*
 # Temporary files
 tmp/
 temp/
+
+# SEO and Ads files (not needed for this project)
+SEO_ADS_GUIDE.md
+frontend/ads.txt
+frontend/robots.txt
+frontend/site.webmanifest
+frontend/sitemap.xml
+update_difficulty.py
