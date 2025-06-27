@@ -137,6 +137,12 @@
                                         <div class="answer-section" id="answer-section" style="display: none;">
                                             <h4>Answer:</h4>
                                             <p id="answer-text"></p>
+                                            <!-- New Question button moved here -->
+                                            <div class="answer-actions" style="text-align: center; margin-top: 1rem;">
+                                                <button class="new-question-btn" onclick="getRandomFlashcard()" style="display: none;" id="new-question-btn">
+                                                    <i class="fas fa-refresh"></i> New Question
+                                                </button>
+                                            </div>
                                         </div>
                                         <div class="explanation-section" id="explanation-section" style="display: none;">
                                             <h4>Explanation:</h4>
@@ -150,9 +156,6 @@
                                         <div class="card-actions">
                                             <button class="reveal-btn" id="reveal-btn" onclick="revealAnswer()">
                                                 <i class="fas fa-eye"></i> Reveal Answer
-                                            </button>
-                                            <button class="new-question-btn" onclick="getRandomFlashcard()" style="display: none;" id="new-question-btn">
-                                                <i class="fas fa-refresh"></i> New Question
                                             </button>
                                             <button class="flip-back-btn" onclick="flipToFront()">
                                                 <i class="fas fa-undo"></i> Start Over
