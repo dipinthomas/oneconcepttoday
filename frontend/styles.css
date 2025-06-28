@@ -253,20 +253,20 @@ body {
 /* Hero section */
 .hero {
     text-align: center;
-    margin-bottom: 1rem; /* Reduced from 2rem */
+    margin-bottom: 2rem; /* Increased to add space between subtitle and card */
     color: white;
     max-width: 800px;
 }
 
 .hero-title {
-    font-size: 2.2rem; /* Reduced from 2.5rem */
+    font-size: 2rem; /* Further reduced from 2.2rem */
     font-weight: 700;
-    margin-bottom: 0.6rem; /* Reduced from 0.8rem */
+    margin-bottom: 0.5rem; /* Further reduced margin */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Slightly reduced */
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
@@ -1071,12 +1071,12 @@ body {
 
 /* Home page container for better layout proportions */
 .home-container {
-    min-height: calc(100vh - 200px); /* Reduced height for more compact layout */
+    min-height: calc(100vh - 280px); /* Much more compact - reduced from 200px */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0; /* Reduced padding */
+    padding: 0.5rem 0; /* Further reduced padding */
 }
 
 /* Responsive design */
@@ -1093,12 +1093,16 @@ body {
     
     /* Tablet styles for home page */
     .home-container {
-        min-height: calc(100vh - 150px); /* More compact on tablet */
-        padding: 1rem 0; /* Reduced padding */
+        min-height: calc(100vh - 200px); /* More compact on tablet */
+        padding: 0.5rem 0; /* Minimal padding */
+    }
+    
+    .hero {
+        margin-bottom: 1.5rem; /* Slightly less space on tablet */
     }
     
     .hero-title {
-        font-size: 2rem; /* Smaller on tablet */
+        font-size: 1.8rem; /* Smaller on tablet */
     }
     
     .hero-subtitle {
@@ -1152,16 +1156,20 @@ body {
     
     /* Mobile styles for home page layout */
     .home-container {
-        min-height: calc(100vh - 120px); /* More compact on mobile */
-        padding: 0.5rem 0; /* Minimal padding */
+        min-height: calc(100vh - 160px); /* Very compact on mobile */
+        padding: 0.25rem 0; /* Minimal padding */
+    }
+    
+    .hero {
+        margin-bottom: 1.2rem; /* Less space on mobile */
     }
     
     .hero-title {
-        font-size: 1.7rem; /* Smaller title */
+        font-size: 1.5rem; /* Much smaller title on mobile */
     }
     
     .hero-subtitle {
-        font-size: 0.9rem; /* Smaller subtitle */
+        font-size: 0.85rem; /* Smaller subtitle */
     }
     
     /* Mobile styles for learning section */
