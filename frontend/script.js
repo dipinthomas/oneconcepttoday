@@ -38,8 +38,8 @@ const topicIcons = {
 
 // Topic descriptions
 const topicDescriptions = {
-    'kubernetes': 'Jump into container orchestration with hands-on Kubernetes challenges. From pods to production-ready deployments.',
-    'default': 'Discover new technology concepts through interactive learning'
+    'kubernetes': 'Master container orchestration concepts and best practices with Kubernetes',
+    'default': 'Learn technology concepts and best practices'
 };
 
 // Initialize the app
@@ -139,25 +139,9 @@ async function getRandomFlashcard() {
 
 // Display functions
 function displayTopics(topics) {
-    topicsGridEl.innerHTML = '';
-    
-    if (topics.length === 0) {
-        topicsGridEl.innerHTML = `
-            <div class="topic-card">
-                <div class="topic-icon">
-                    <i class="fas fa-exclamation-circle"></i>
-                </div>
-                <h3 class="topic-name">No Topics Available</h3>
-                <p class="topic-description">Please check that the backend server is running and topics are configured.</p>
-            </div>
-        `;
-        return;
-    }
-    
-    topics.forEach(topic => {
-        const topicCard = createTopicCard(topic);
-        topicsGridEl.appendChild(topicCard);
-    });
+    // Don't override the static content - the layout is now static
+    // Topics are handled by the static HTML layout
+    console.log('Topics loaded:', topics);
 }
 
 function createTopicCard(topic) {

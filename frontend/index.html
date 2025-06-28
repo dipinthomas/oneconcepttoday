@@ -38,28 +38,48 @@
                     <p class="hero-subtitle">Build container orchestration expertise one concept at a time through smart, AI-curated flashcards</p>
                 </div>
                 
-                <div class="home-intro">
-                    <div class="intro-cards">
-                        <div class="intro-card">
-                            <div class="intro-icon">🎯</div>
-                            <h3>Practice Daily</h3>
-                            <p>Reinforce your Kubernetes knowledge with bite-sized learning sessions</p>
+                <!-- Feature boxes -->
+                <div class="features-section">
+                    <div class="topics-grid">
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-target"></i>
+                            </div>
+                            <h3 class="topic-name">Practice Daily</h3>
+                            <p class="topic-description">Reinforce your Kubernetes knowledge with bite-sized learning sessions</p>
                         </div>
-                        <div class="intro-card">
-                            <div class="intro-icon">🤖</div>
-                            <h3>AI-Enhanced</h3>
-                            <p>Questions automatically updated from latest documentation and best practices</p>
+                        
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 class="topic-name">AI-Enhanced</h3>
+                            <p class="topic-description">Questions automatically updated from latest documentation and best practices</p>
                         </div>
-                        <div class="intro-card">
-                            <div class="intro-icon">📈</div>
-                            <h3>Progressive</h3>
-                            <p>Start basic and advance to expert-level container orchestration topics</p>
+                        
+                        <div class="topic-card">
+                            <div class="topic-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="topic-name">Progressive</h3>
+                            <p class="topic-description">Start basic and advance to expert-level container orchestration topics</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="topics-grid" id="topics-grid">
-                    <!-- Topics will be loaded here -->
+                <!-- Learning section -->
+                <div class="learning-section">
+                    <div class="topic-card kubernetes-card">
+                        <div class="topic-icon">
+                            <i class="fas fa-dharmachakra"></i>
+                        </div>
+                        <h3 class="topic-name">Kubernetes</h3>
+                        <p class="topic-description">Jump into container orchestration with hands-on Kubernetes challenges. From pods to production-ready deployments.</p>
+                        <button class="topic-btn" onclick="showDifficultySelection('kubernetes')">
+                            <i class="fas fa-play"></i>
+                            Start Learning
+                        </button>
+                    </div>
                 </div>
             </div>
 
