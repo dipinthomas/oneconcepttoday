@@ -271,67 +271,21 @@ body {
     margin: 0 auto;
 }
 
-/* Home intro section */
-.home-intro {
-    margin: 4rem 0 3rem 0;
-}
-
-.intro-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.intro-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.intro-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.intro-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.intro-card h3 {
-    color: #1f2937;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-}
-
-.intro-card p {
-    color: #6b7280;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
 /* Topics grid */
 .topics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .topic-card {
     background: white;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -346,21 +300,23 @@ body {
 }
 
 .topic-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #6366f1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .topic-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #1f2937;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .topic-description {
     color: #6b7280;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 .topic-btn {
@@ -1111,6 +1067,8 @@ body {
     
     .topics-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 400px;
     }
     
     .nav {
@@ -1165,16 +1123,6 @@ body {
     .topics-grid-about {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    
-    /* Tablet styles for home intro section */
-    .intro-cards {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-    
-    .intro-card {
-        padding: 1.8rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1202,33 +1150,6 @@ body {
         padding: 2rem;
     }
     
-    /* Mobile styles for home intro section */
-    .home-intro {
-        margin: 2rem 0;
-    }
-    
-    .intro-cards {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-    
-    .intro-card {
-        padding: 1.5rem;
-    }
-    
-    .intro-icon {
-        font-size: 2rem;
-    }
-    
-    .intro-card h3 {
-        font-size: 1.2rem;
-    }
-    
-    .intro-card p {
-        font-size: 0.95rem;
-    }
-
     /* Mobile styles for enhanced About page */
     .creator-info {
         flex-direction: column;
@@ -1257,6 +1178,26 @@ body {
     
     .topic-category {
         padding: 1rem;
+    }
+    
+    /* Mobile styles for topic cards */
+    .topic-card {
+        padding: 1.2rem;
+    }
+    
+    .topic-icon {
+        font-size: 2rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .topic-name {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .topic-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
     }
     
     /* Mobile styles for AI features and community sections */
