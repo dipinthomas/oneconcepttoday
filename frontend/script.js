@@ -38,8 +38,8 @@ const topicIcons = {
 
 // Topic descriptions
 const topicDescriptions = {
-    'kubernetes': 'Master container orchestration concepts and best practices with Kubernetes',
-    'default': 'Learn technology concepts and best practices'
+    'kubernetes': 'Jump into container orchestration with hands-on Kubernetes challenges. From pods to production-ready deployments.',
+    'default': 'Discover new technology concepts through interactive learning'
 };
 
 // Initialize the app
