@@ -1028,15 +1028,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Features section */
-.features-section {
-    margin: 3rem 0;
-}
-
-.features-section .topics-grid {
-    max-width: 1000px;
-}
-
 /* Learning section */
 .learning-section {
     margin: 4rem 0;
@@ -1115,11 +1106,7 @@ body {
         max-width: 400px;
     }
     
-    /* Mobile styles for features and learning sections */
-    .features-section .topics-grid {
-        max-width: 350px;
-    }
-    
+    /* Mobile styles for learning section */
     .kubernetes-card {
         max-width: 350px;
         padding: 1.5rem;
