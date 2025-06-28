@@ -253,22 +253,24 @@ body {
 /* Hero section */
 .hero {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem; /* Reduced from 2rem */
     color: white;
+    max-width: 800px;
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.2rem; /* Reduced from 2.5rem */
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem; /* Reduced from 0.8rem */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.5;
 }
 
 /* Topics grid */
@@ -1030,34 +1032,51 @@ body {
 
 /* Learning section */
 .learning-section {
-    margin: 4rem 0;
+    margin: 0;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .kubernetes-card {
-    max-width: 500px;
+    max-width: 600px;
+    width: 100%;
     margin: 0 auto;
+    padding: 3rem 2.5rem;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .kubernetes-card .topic-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .kubernetes-card .topic-name {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .kubernetes-card .topic-description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .kubernetes-card .topic-btn {
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Home page container for better layout proportions */
+.home-container {
+    min-height: calc(100vh - 200px); /* Reduced height for more compact layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0; /* Reduced padding */
 }
 
 /* Responsive design */
@@ -1072,22 +1091,47 @@ body {
         margin-top: 2rem;
     }
     
+    /* Tablet styles for home page */
+    .home-container {
+        min-height: calc(100vh - 150px); /* More compact on tablet */
+        padding: 1rem 0; /* Reduced padding */
+    }
+    
     .hero-title {
-        font-size: 2rem;
+        font-size: 2rem; /* Smaller on tablet */
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.05rem;
+    }
+    
+    .kubernetes-card {
+        max-width: 500px;
+        padding: 2.5rem 2rem;
+        transform: scale(1.02);
+    }
+    
+    .kubernetes-card .topic-icon {
+        font-size: 3.5rem;
+    }
+    
+    .kubernetes-card .topic-name {
+        font-size: 1.8rem;
+    }
+    
+    .kubernetes-card .topic-description {
+        font-size: 1.1rem;
+    }
+    
+    .kubernetes-card .topic-btn {
+        padding: 1.1rem 2.5rem;
+        font-size: 1.1rem;
     }
     
     .flashcard {
         width: 100%;
         max-width: 500px;
         height: 350px;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
     }
     
     .hero-subtitle {
@@ -1106,26 +1150,44 @@ body {
         max-width: 400px;
     }
     
+    /* Mobile styles for home page layout */
+    .home-container {
+        min-height: calc(100vh - 120px); /* More compact on mobile */
+        padding: 0.5rem 0; /* Minimal padding */
+    }
+    
+    .hero-title {
+        font-size: 1.7rem; /* Smaller title */
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem; /* Smaller subtitle */
+    }
+    
     /* Mobile styles for learning section */
     .kubernetes-card {
-        max-width: 350px;
-        padding: 1.5rem;
+        max-width: 90%;
+        padding: 2rem 1.5rem;
+        transform: scale(1);
     }
     
     .kubernetes-card .topic-icon {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
     }
     
     .kubernetes-card .topic-name {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
     }
     
     .kubernetes-card .topic-description {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .kubernetes-card .topic-btn {
-        padding: 0.8rem 2rem;
+        padding: 1rem 2rem;
         font-size: 1rem;
     }
 
