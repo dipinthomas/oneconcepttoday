@@ -75,3 +75,7 @@ frontend/robots.txt
 frontend/site.webmanifest
 frontend/sitemap.xml
 update_difficulty.py
+
+# Development question files (use data/kubernetes.json for production)
+questions.txt
+additional_advanced_questions.txt

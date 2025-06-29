@@ -1,50 +1,182 @@
 [
   {
-    "question": "What is a Kubernetes Pod?",
+    "question": "What is Kubernetes?",
     "options": [
-      "A virtual machine managed by Kubernetes",
-      "The smallest deployable unit in Kubernetes", 
-      "A container image stored in Docker Hub"
+      "A container registry for storing images",
+      "A portable, extensible, open source platform for managing containerized workloads and services",
+      "A programming language for cloud applications"
     ],
     "correct_option_index": 1,
-    "explanation": "A Pod is the smallest deployable unit in Kubernetes and can host one or more containers that share resources.",
+    "explanation": "Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation.",
+    "reference_url": "https://kubernetes.io/docs/concepts/overview/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What does 'K8s' stand for?",
+    "options": [
+      "Kubernetes version 8",
+      "K + 8 letters + s (abbreviation for Kubernetes)",
+      "Kubernetes 8 servers"
+    ],
+    "correct_option_index": 1,
+    "explanation": "K8s is an abbreviation for Kubernetes (K + 8 letters + s).",
+    "reference_url": "https://kubernetes.io/docs/concepts/overview/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a Pod in Kubernetes?",
+    "options": [
+      "A virtual machine for running containers",
+      "A set of running containers on your cluster and the smallest deployable compute object",
+      "A storage volume for persistent data"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A Pod represents a set of running containers on your cluster and is the smallest deployable compute object in Kubernetes.",
     "reference_url": "https://kubernetes.io/docs/concepts/workloads/pods/",
     "difficulty": "basic"
   },
   {
-    "question": "What is kubectl?",
+    "question": "What are the two main components of a Kubernetes cluster?",
     "options": [
-      "A Kubernetes container runtime",
-      "The command-line tool for interacting with Kubernetes",
-      "A type of Kubernetes storage"
+      "Pods and Services",
+      "Control plane and worker nodes",
+      "Containers and Images"
     ],
     "correct_option_index": 1,
-    "explanation": "kubectl is the command-line tool that allows you to run commands against Kubernetes clusters.",
-    "reference_url": "https://kubernetes.io/docs/reference/kubectl/",
+    "explanation": "Control plane (manages the cluster) and worker nodes (run the actual workloads).",
+    "reference_url": "https://kubernetes.io/docs/concepts/architecture/",
     "difficulty": "basic"
   },
   {
-    "question": "What is the purpose of a Kubernetes Service?",
+    "question": "What is the kube-apiserver?",
     "options": [
-      "To store configuration data",
-      "To provide persistent storage",
-      "To expose pods to network traffic"
+      "A container runtime for executing pods",
+      "The front end for the Kubernetes control plane that exposes the Kubernetes API",
+      "A network proxy for pod communication"
     ],
-    "correct_option_index": 2,
-    "explanation": "A Service provides a stable way to expose pods to network traffic, enabling load balancing and service discovery.",
+    "correct_option_index": 1,
+    "explanation": "The API server is the front end for the Kubernetes control plane that exposes the Kubernetes API and validates and configures data for API objects.",
+    "reference_url": "https://kubernetes.io/docs/concepts/architecture/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is etcd in Kubernetes?",
+    "options": [
+      "A container orchestration tool",
+      "A consistent and highly-available key value store used as Kubernetes' backing store",
+      "A load balancing service"
+    ],
+    "correct_option_index": 1,
+    "explanation": "etcd is a consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.",
+    "reference_url": "https://kubernetes.io/docs/concepts/architecture/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What does the kube-scheduler do?",
+    "options": [
+      "Manages network traffic between pods",
+      "Watches for newly created Pods with no assigned node and selects a node for them",
+      "Stores configuration data for applications"
+    ],
+    "correct_option_index": 1,
+    "explanation": "The kube-scheduler watches for newly created Pods with no assigned node and selects a node for them to run on.",
+    "reference_url": "https://kubernetes.io/docs/concepts/architecture/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is kubelet?",
+    "options": [
+      "A command-line tool for managing clusters",
+      "An agent that runs on each node and ensures containers are running in Pods",
+      "A storage management component"
+    ],
+    "correct_option_index": 1,
+    "explanation": "An agent that runs on each node in the cluster and ensures that containers are running in Pods as described in PodSpecs.",
+    "reference_url": "https://kubernetes.io/docs/concepts/architecture/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a Deployment in Kubernetes?",
+    "options": [
+      "A type of persistent storage",
+      "A workload resource that manages a stateless application",
+      "A network configuration object"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A workload resource that manages a stateless application, ensuring the right number of identical Pods are running.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "When would you use a StatefulSet?",
+    "options": [
+      "For stateless web applications",
+      "For Pods that need to track state, persistent storage, or stable network identities",
+      "For one-time batch jobs"
+    ],
+    "correct_option_index": 1,
+    "explanation": "For running one or more related Pods that need to track state, persistent storage, or stable network identities.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a Kubernetes Service?",
+    "options": [
+      "A container image repository",
+      "An API object that provides a stable IP address and DNS name for accessing Pods",
+      "A configuration management tool"
+    ],
+    "correct_option_index": 1,
+    "explanation": "An API object that provides a stable IP address and DNS name for accessing a set of Pods.",
     "reference_url": "https://kubernetes.io/docs/concepts/services-networking/service/",
     "difficulty": "basic"
   },
   {
-    "question": "Which file format is commonly used for Kubernetes manifests?",
+    "question": "What is the default Service type in Kubernetes?",
     "options": [
-      "JSON only",
-      "XML only", 
-      "YAML or JSON"
+      "ClusterIP",
+      "NodePort",
+      "LoadBalancer"
     ],
-    "correct_option_index": 2,
-    "explanation": "Kubernetes manifests can be written in both YAML and JSON formats, though YAML is more commonly used.",
-    "reference_url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/",
+    "correct_option_index": 0,
+    "explanation": "ClusterIP, which exposes the Service on a cluster-internal IP.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/service/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a ConfigMap?",
+    "options": [
+      "A security policy for pods",
+      "An API object used to store non-confidential data in key-value pairs",
+      "A network routing configuration"
+    ],
+    "correct_option_index": 1,
+    "explanation": "An API object used to store non-confidential data in key-value pairs that can be consumed by Pods.",
+    "reference_url": "https://kubernetes.io/docs/concepts/configuration/configmap/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a Secret in Kubernetes?",
+    "options": [
+      "A hidden pod that runs system tasks",
+      "An object that contains sensitive data such as passwords, OAuth tokens, or SSH keys",
+      "A private network configuration"
+    ],
+    "correct_option_index": 1,
+    "explanation": "An object that contains sensitive data such as passwords, OAuth tokens, or SSH keys.",
+    "reference_url": "https://kubernetes.io/docs/concepts/configuration/secret/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What command shows all Pods in the current namespace?",
+    "options": [
+      "kubectl list pods",
+      "kubectl get pods",
+      "kubectl show pods"
+    ],
+    "correct_option_index": 1,
+    "explanation": "kubectl get pods shows all pods in the current namespace.",
+    "reference_url": "https://kubernetes.io/docs/reference/kubectl/",
     "difficulty": "basic"
   },
   {
@@ -189,6 +321,1214 @@
     "correct_option_index": 1,
     "explanation": "Troubleshooting CrashLoopBackOff involves checking pod logs, resource limits, container configuration, and underlying issues causing the crashes.",
     "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/debug-pods-replication-controllers/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What are the two main components of a Kubernetes cluster?",
+    "options": [
+      "Pods and Services",
+      "Control plane and worker nodes",
+      "Containers and Images"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Control plane (manages the cluster) and worker nodes (run the actual workloads).",
+    "reference_url": "https://kubernetes.io/docs/concepts/architecture/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What does kube-proxy do?",
+    "options": [
+      "Manages container images",
+      "A network proxy that runs on each node, implementing part of the Kubernetes Service concept",
+      "Schedules pods on nodes"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A network proxy that runs on each node, implementing part of the Kubernetes Service concept by maintaining network rules.",
+    "reference_url": "https://kubernetes.io/docs/concepts/architecture/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a DaemonSet used for?",
+    "options": [
+      "Running database applications",
+      "To ensure that a copy of a Pod runs on all (or some) nodes in the cluster",
+      "Managing user authentication"
+    ],
+    "correct_option_index": 1,
+    "explanation": "To ensure that a copy of a Pod runs on all (or some) nodes in the cluster, typically for system-level services.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is the difference between a Job and a CronJob?",
+    "options": [
+      "Jobs are for databases, CronJobs are for web apps",
+      "A Job runs a task once, while a CronJob runs the same Job multiple times on a schedule",
+      "Jobs run continuously, CronJobs run once"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A Job runs a task to completion once, while a CronJob runs the same Job multiple times according to a schedule.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What are the main Service types in Kubernetes?",
+    "options": [
+      "Pod, Container, Volume",
+      "ClusterIP, NodePort, LoadBalancer, and ExternalName",
+      "Basic, Standard, Premium"
+    ],
+    "correct_option_index": 1,
+    "explanation": "ClusterIP (default), NodePort, LoadBalancer, and ExternalName.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/service/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is Ingress in Kubernetes?",
+    "options": [
+      "A type of storage volume",
+      "An API object that manages external access to services in a cluster",
+      "A security policy"
+    ],
+    "correct_option_index": 1,
+    "explanation": "An API object that manages external access to services in a cluster, typically HTTP/HTTPS traffic.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/ingress/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a Volume in Kubernetes?",
+    "options": [
+      "A network interface for pods",
+      "A directory accessible to containers in a Pod, with data that persists for the Pod's lifetime",
+      "A security credential"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A directory accessible to containers in a Pod, with data that persists for the lifetime of the Pod.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/volumes/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a PersistentVolume (PV)?",
+    "options": [
+      "A temporary storage for pod logs",
+      "A piece of storage in the cluster provisioned by an administrator or dynamically",
+      "A network configuration object"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A piece of storage in the cluster that has been provisioned by an administrator or dynamically using Storage Classes.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What happens when a Pod fails in a Deployment?",
+    "options": [
+      "The entire cluster restarts",
+      "Kubernetes automatically creates a new Pod to replace the failed one",
+      "Nothing happens until manual intervention"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Kubernetes automatically creates a new Pod to replace the failed one, maintaining the desired replica count.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "How do Pods communicate with each other?",
+    "options": [
+      "Through shared files only",
+      "Each Pod gets its own unique IP address and can communicate directly",
+      "Only through external load balancers"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Each Pod gets its own unique IP address, and Pods can communicate directly with each other across nodes.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a PersistentVolumeClaim (PVC)?",
+    "options": [
+      "A backup of persistent data",
+      "A request for storage by a user that can be fulfilled by binding to a PersistentVolume",
+      "A claim for CPU resources"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A request for storage by a user that can be fulfilled by binding to a PersistentVolume.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a StorageClass?",
+    "options": [
+      "A type of container storage",
+      "An API object that describes the 'classes' of storage available",
+      "A storage performance metric"
+    ],
+    "correct_option_index": 1,
+    "explanation": "An API object that describes the 'classes' of storage available, including provisioner, parameters, and reclaim policy.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/storage-classes/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "How do you inject environment variables into a Pod?",
+    "options": [
+      "Using SSH to access the container",
+      "Using the env field in the container specification, often referencing ConfigMaps or Secrets",
+      "Only through command line arguments"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Using the env field in the container specification, often referencing ConfigMaps or Secrets.",
+    "reference_url": "https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is the default namespace called?",
+    "options": [
+      "default",
+      "system",
+      "main"
+    ],
+    "correct_option_index": 0,
+    "explanation": "'default' - this is where objects are placed if no namespace is specified.",
+    "reference_url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "How do you create a resource from a YAML file?",
+    "options": [
+      "kubectl create -f filename.yaml",
+      "kubectl apply -f filename.yaml",
+      "kubectl deploy filename.yaml"
+    ],
+    "correct_option_index": 1,
+    "explanation": "kubectl apply -f filename.yaml (apply is preferred over create for most use cases).",
+    "reference_url": "https://kubernetes.io/docs/reference/kubectl/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a ServiceAccount?",
+    "options": [
+      "A user account for cluster administrators",
+      "An account used by processes running in Pods to authenticate with the Kubernetes API server",
+      "A billing account for cloud services"
+    ],
+    "correct_option_index": 1,
+    "explanation": "An account used by processes running in Pods to authenticate with the Kubernetes API server.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/service-accounts/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What are Pod Security Standards?",
+    "options": [
+      "Performance benchmarks for pods",
+      "Policies that define security-sensitive aspects of Pod specifications at three levels",
+      "Storage security policies"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Policies that define security-sensitive aspects of Pod specifications at three levels: privileged, baseline, and restricted.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/pod-security-standards/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is NetworkPolicy?",
+    "options": [
+      "A network configuration tool",
+      "A resource that controls traffic flow between Pods and/or external network endpoints",
+      "A policy for network administrators"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A resource that controls traffic flow between Pods and/or external network endpoints.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is a selector in Kubernetes?",
+    "options": [
+      "A tool for selecting nodes",
+      "A query mechanism used to identify a set of objects based on their labels",
+      "A network selector for IP addresses"
+    ],
+    "correct_option_index": 1,
+    "explanation": "A query mechanism used to identify a set of objects based on their labels.",
+    "reference_url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "How do Services find the Pods they should route traffic to?",
+    "options": [
+      "Using IP addresses",
+      "Using label selectors that match the labels on the target Pods",
+      "Using DNS names"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Using label selectors that match the labels on the target Pods.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/service/",
+    "difficulty": "basic"
+  },
+  {
+    "question": "What is the role of EndpointSlices in Kubernetes networking?",
+    "options": [
+      "They manage DNS resolution",
+      "EndpointSlices provide information about Pods currently backing a Service",
+      "They control network bandwidth"
+    ],
+    "correct_option_index": 1,
+    "explanation": "EndpointSlices provide information about the Pods currently backing a Service, allowing Services to scale to handle large numbers of backends efficiently.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "How does Kubernetes achieve high availability for the control plane?",
+    "options": [
+      "Using a single master with backups",
+      "Running multiple instances of control plane components across multiple machines",
+      "Using cloud provider redundancy only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "By running multiple instances of control plane components across multiple machines, with etcd clustering for data redundancy.",
+    "reference_url": "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What are Pod disruption budgets and their purpose?",
+    "options": [
+      "Financial limits for cloud costs",
+      "Specify minimum Pods that must remain available during voluntary disruptions",
+      "Network bandwidth limits for pods"
+    ],
+    "correct_option_index": 1,
+    "explanation": "PDBs specify the minimum number of Pods that must remain available during voluntary disruptions like node maintenance or cluster upgrades.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/pods/disruptions/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What are init containers and when would you use them?",
+    "options": [
+      "Containers that initialize the cluster",
+      "Containers that run before app containers start, used for setup tasks",
+      "Containers that monitor application health"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Init containers run before app containers start, used for setup tasks like database migrations, waiting for services, or downloading data.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/pods/init-containers/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is the difference between requests and limits for CPU and memory?",
+    "options": [
+      "Requests are maximums, limits are minimums",
+      "Requests specify minimum guaranteed resources, limits specify maximum allowed",
+      "Requests and limits are the same thing"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Requests specify the minimum resources guaranteed to a container, while limits specify the maximum resources a container can use.",
+    "reference_url": "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is the Container Network Interface (CNI)?",
+    "options": [
+      "A web interface for managing containers",
+      "A specification for configuring network interfaces in Linux containers",
+      "A monitoring tool for network traffic"
+    ],
+    "correct_option_index": 1,
+    "explanation": "CNI is a specification and libraries for configuring network interfaces in Linux containers, allowing different networking solutions to integrate with Kubernetes.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "How does DNS resolution work for Services within a Kubernetes cluster?",
+    "options": [
+      "Using external DNS servers only",
+      "Kubernetes runs a cluster DNS service that provides DNS records for Services",
+      "DNS is not supported in Kubernetes"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Kubernetes runs a cluster DNS service (usually CoreDNS) that provides DNS records for Services, allowing Pods to discover services by name.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What are the different access modes for PersistentVolumes?",
+    "options": [
+      "Public, Private, Protected",
+      "ReadWriteOnce, ReadOnlyMany, ReadWriteMany, ReadWriteOncePod",
+      "Local, Remote, Distributed"
+    ],
+    "correct_option_index": 1,
+    "explanation": "ReadWriteOnce (single node read-write), ReadOnlyMany (multiple nodes read-only), ReadWriteMany (multiple nodes read-write), ReadWriteOncePod (single Pod).",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/persistent-volumes/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is CSI (Container Storage Interface) and its benefits?",
+    "options": [
+      "A container scheduling interface",
+      "A standard interface for container orchestrators to communicate with storage systems",
+      "A security interface for containers"
+    ],
+    "correct_option_index": 1,
+    "explanation": "CSI is a standard interface for container orchestrators to communicate with storage systems, enabling vendor-agnostic storage solutions.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/volumes/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What are projected volumes and what types can be projected?",
+    "options": [
+      "Virtual volumes for testing",
+      "Volumes that map multiple sources into one directory: secrets, configMaps, downwardAPI, serviceAccountToken",
+      "Volumes projected to external storage"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Projected volumes map multiple volume sources into a single directory: secrets, configMaps, downwardAPI, and serviceAccountToken.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/projected-volumes/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is the difference between Role and ClusterRole in RBAC?",
+    "options": [
+      "Role is for users, ClusterRole is for services",
+      "Roles are namespaced, ClusterRoles are cluster-wide",
+      "Role is basic, ClusterRole is advanced"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Roles are namespaced and grant permissions within a specific namespace, while ClusterRoles are cluster-wide and can grant permissions across all namespaces.",
+    "reference_url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What is the difference between horizontal and vertical Pod autoscaling?",
+    "options": [
+      "Horizontal scales left-right, vertical scales up-down",
+      "HPA scales number of replicas, VPA adjusts CPU and memory requests/limits",
+      "Horizontal is automatic, vertical is manual"
+    ],
+    "correct_option_index": 1,
+    "explanation": "HPA scales the number of Pod replicas based on metrics, while VPA adjusts CPU and memory requests/limits of running Pods.",
+    "reference_url": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What are CRDs (Custom Resource Definitions) and how do they extend Kubernetes?",
+    "options": [
+      "Complex Resource Definitions for advanced users",
+      "Allow defining custom resources with their own API endpoints",
+      "Critical Resource Definitions for system components"
+    ],
+    "correct_option_index": 1,
+    "explanation": "CRDs allow defining custom resources with their own API endpoints, enabling operators and custom controllers to manage application-specific objects.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "How do you implement health checks for applications in Kubernetes?",
+    "options": [
+      "Using monitoring tools only",
+      "Using liveness probes, readiness probes, and startup probes",
+      "Using log analysis only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Using liveness probes (restart unhealthy containers), readiness probes (control traffic routing), and startup probes (handle slow-starting containers).",
+    "reference_url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "What are the QoS classes in Kubernetes?",
+    "options": [
+      "Quality, Standard, Basic",
+      "Guaranteed, Burstable, BestEffort",
+      "High, Medium, Low"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Based on resource requests/limits: Guaranteed (requests=limits), Burstable (requests<limits), BestEffort (no requests/limits). Affects scheduling and eviction priority.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "How do you troubleshoot a Service that's not working?",
+    "options": [
+      "Restart the cluster",
+      "Check Service endpoints, verify Pod labels match selectors, test DNS resolution",
+      "Increase service replicas"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Check Service endpoints, verify Pod labels match selectors, test DNS resolution, and examine kube-proxy logs and iptables rules.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "How would you design a multi-master Kubernetes cluster with etcd clustering?",
+    "options": [
+      "Use single master with backup",
+      "Implement odd number of etcd nodes across failure domains with load balancer for API servers",
+      "Use multiple masters without etcd clustering"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement odd number of etcd nodes (3-5) across failure domains, use stacked or external etcd topology, configure load balancer for API servers, implement cluster networking with CNI, plan for split-brain scenarios with proper quorum, and ensure secure communication with mTLS certificates.",
+    "reference_url": "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement cluster-level admission control with custom webhooks?",
+    "options": [
+      "Using built-in admission controllers only",
+      "Create ValidatingAdmissionWebhook/MutatingAdmissionWebhook with proper certificate management",
+      "Using RBAC policies only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Create ValidatingAdmissionWebhook/MutatingAdmissionWebhook with failurePolicy (Ignore/Fail), implement HTTPS webhook service with proper TLS certificates, handle certificate rotation, implement idempotent webhook logic, and ensure webhook availability for cluster stability.",
+    "reference_url": "https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How would you design a multi-tenant Kubernetes platform with strict isolation?",
+    "options": [
+      "Use single namespace for all tenants",
+      "Use namespaces with NetworkPolicies, RBAC, ResourceQuotas, and Pod Security Standards",
+      "Use separate clusters for each tenant only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use namespaces with NetworkPolicies for isolation, implement RBAC with least privilege, deploy ResourceQuotas and LimitRanges, use Pod Security Standards/OPA Gatekeeper, implement tenant-specific node pools with taints/tolerations, and consider virtual clusters or namespace-as-a-service solutions.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement a custom scheduler for GPU workloads?",
+    "options": [
+      "Use default scheduler with GPU labels",
+      "Extend scheduler using framework plugins with GPU affinity and gang scheduling",
+      "Use external GPU management tools only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Extend Kubernetes scheduler using scheduler framework plugins (Filter, Score), implement custom predicates for GPU affinity, resource topology awareness, batch job prioritization, gang scheduling for ML workloads, and integrate with node labeling for specialized hardware.",
+    "reference_url": "https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a zero-trust network architecture using service mesh?",
+    "options": [
+      "Use traditional firewall rules",
+      "Implement service mesh with automatic mTLS, SPIFFE/SPIRE for identity, and fine-grained policies",
+      "Use network segmentation only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement service mesh (Istio/Linkerd) with automatic mTLS between services, use SPIFFE/SPIRE for workload identity, implement fine-grained access policies, deploy ingress/egress gateways, enable traffic encryption at rest and in transit, and implement audit logging.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement canary deployments with automated rollback?",
+    "options": [
+      "Manually switch traffic between versions",
+      "Use ingress controllers with weighted routing and metrics-based promotion",
+      "Use blue-green deployment only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use ingress controllers (Nginx/Istio/Linkerd) with weighted routing, implement progressive traffic shifting (5%→25%→50%→100%), monitor success rate/latency/error rate metrics, implement automated rollback triggers, and integrate with CI/CD pipelines for deployment automation.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a comprehensive backup and disaster recovery strategy?",
+    "options": [
+      "Backup application data only",
+      "Implement volume snapshots, cluster-wide backups, cross-region replication, and recovery procedures",
+      "Use cloud provider backups only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement volume snapshots with CSI drivers, use Velero for cluster-wide backups, configure cross-region replication, implement database-specific backup tools, create recovery runbooks, test disaster recovery procedures regularly, and implement RPO/RTO monitoring.",
+    "reference_url": "https://kubernetes.io/docs/concepts/cluster-administration/logging/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement comprehensive security scanning and vulnerability management?",
+    "options": [
+      "Scan images before deployment only",
+      "Integrate image scanning in CI/CD, admission controllers, and runtime security monitoring",
+      "Use security policies only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Integrate image scanning in CI/CD (Trivy/Twistlock/Aqua), implement admission controllers for vulnerability policies, deploy runtime security monitoring, implement CIS benchmarks compliance, use pod security standards, monitor for malware/anomalies, and implement security incident response.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement cost optimization strategies including spot instances?",
+    "options": [
+      "Use reserved instances only",
+      "Use cluster autoscaler with spot instances, mixed instance types, and cost-based scheduling",
+      "Manual cost monitoring only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use cluster autoscaler with spot instances, implement node groups with mixed instance types, create scheduling policies based on cost metrics, implement resource recommendations, monitor resource utilization patterns, optimize for cloud pricing models, and implement cost allocation tracking.",
+    "reference_url": "https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement a comprehensive observability stack for microservices?",
+    "options": [
+      "Use logs only",
+      "Deploy Prometheus/Grafana for metrics, Elasticsearch/Fluentd for logs, Jaeger/Zipkin for tracing",
+      "Use cloud monitoring services only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Deploy Prometheus/Grafana for metrics, Elasticsearch/Fluentd for logs, Jaeger/Zipkin for tracing, implement service level indicators (SLIs), create custom dashboards for business metrics, implement alerting with PagerDuty/Slack, and establish SLA monitoring.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you troubleshoot etcd performance issues affecting cluster stability?",
+    "options": [
+      "Restart etcd pods only",
+      "Monitor etcd metrics, analyze disk I/O, check network latency, and optimize configuration",
+      "Increase etcd memory only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Monitor etcd metrics (request latency, leader changes), analyze disk I/O performance, check network latency between etcd nodes, investigate large key operations, monitor etcd compaction and defragmentation, check cluster member health, and optimize etcd configuration parameters.",
+    "reference_url": "https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement Kubernetes integration with serverless computing?",
+    "options": [
+      "Use traditional deployments with scaling",
+      "Deploy Knative serving and eventing with scale-to-zero and event-driven architectures",
+      "Use external serverless platforms only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Deploy Knative serving and eventing, implement scale-to-zero configurations, optimize container startup times, implement event-driven architectures with cloud events, integrate with messaging systems, implement traffic splitting for serverless deployments, and monitor cold start performance.",
+    "reference_url": "https://kubernetes.io/docs/concepts/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you develop a custom operator for complex stateful applications?",
+    "options": [
+      "Use existing operators only",
+      "Implement operator with controller-runtime, custom resources, and reconciliation logic",
+      "Use manual deployment scripts"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement operator with controller-runtime, create custom resources for application configuration, implement reconciliation logic with state machine, handle complex upgrade procedures, implement backup and restore automation, create scaling policies with custom metrics, and implement observability.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement a GitOps workflow with advanced deployment strategies?",
+    "options": [
+      "Use manual deployments with git",
+      "Use ArgoCD/Flux with multi-stage pipelines, automated testing, and progressive delivery",
+      "Use traditional CI/CD only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use ArgoCD/Flux for GitOps, implement multi-stage deployment pipelines, create automated testing and validation, implement progressive delivery patterns, create rollback automation, monitor deployment health, and maintain environment consistency.",
+    "reference_url": "https://kubernetes.io/docs/concepts/cluster-administration/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement cluster lifecycle management with automated upgrades and configuration drift detection?",
+    "options": [
+      "Manual upgrades only",
+      "Use cluster API for declarative management with automated upgrade strategies and drift detection",
+      "Cloud provider managed services only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use cluster API for declarative cluster management, implement automated upgrade strategies with drain and cordon, implement node image management, detect and remediate configuration drift, maintain upgrade runbooks, test upgrade procedures in staging, and implement upgrade rollback procedures.",
+    "reference_url": "https://kubernetes.io/docs/tasks/administer-cluster/cluster-upgrade/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a service catalog with automated provisioning and governance?",
+    "options": [
+      "Manual service deployment",
+      "Implement service catalog with operators, automated workflows, and governance policies",
+      "Use external service catalogs only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement service catalog with operators, create automated provisioning workflows, implement service lifecycle management, create governance policies and approval workflows, implement cost tracking and optimization, provide self-service interfaces, and maintain service reliability.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/service-catalog/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you troubleshoot complex networking issues involving intermittent connectivity across multiple clusters with service mesh?",
+    "options": [
+      "Restart all networking components",
+      "Analyze service mesh proxy logs, check mTLS certificates, examine policies and routing rules",
+      "Use external monitoring tools only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Analyze service mesh proxy logs and metrics, check mTLS certificate validity and rotation, examine network policies and security rules, investigate DNS resolution and service discovery, monitor cross-cluster connectivity, check load balancer health, and analyze traffic patterns and routing rules.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you debug memory leaks in Java applications causing OOMKilled errors and node resource exhaustion?",
+    "options": [
+      "Increase memory limits only",
+      "Analyze heap dumps, monitor GC logs, investigate memory patterns with profiling tools",
+      "Restart pods frequently"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Analyze heap dumps and GC logs, monitor memory usage patterns, check JVM flags and container limits, investigate memory leaks with profiling tools, analyze native memory usage, check for resource contention, implement memory monitoring and alerting, and optimize JVM configurations.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/debug-pods-replication-controllers/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you investigate performance degradation in high-throughput applications with complex dependency chains?",
+    "options": [
+      "Scale up resources only",
+      "Implement distributed tracing, analyze resource utilization, investigate bottlenecks and optimize critical paths",
+      "Restart all services"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement distributed tracing to identify bottlenecks, analyze resource utilization patterns, investigate database connection pooling, check thread pool configurations, monitor garbage collection impact, analyze network latency and bandwidth, implement load testing, and optimize critical path performance.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you debug complex scheduling issues where critical workloads are not placed optimally?",
+    "options": [
+      "Use default scheduler settings",
+      "Analyze scheduler logs, check node capacity, investigate constraints and optimize configuration",
+      "Manually place pods"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Analyze scheduler logs and metrics, check node capacity and resource availability, investigate taints/tolerations and affinity rules, monitor resource requests vs limits, check priority classes and preemption policies, investigate pending pod reasons, and optimize scheduling configuration.",
+    "reference_url": "https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a machine learning platform on Kubernetes with model training, serving, and A/B testing?",
+    "options": [
+      "Use external ML platforms only",
+      "Implement Kubeflow workflows, model serving, versioning, and automated pipelines",
+      "Manual model deployment"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement Kubeflow for ML workflows, deploy model serving with KFServing/Seldon, implement model versioning and registry, create automated training pipelines, implement A/B testing for models, monitor model performance and drift, and integrate with data processing pipelines.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement WebAssembly (WASM) runtime integration for enhanced security and performance?",
+    "options": [
+      "Use traditional container runtimes only",
+      "Implement WASM runtimes with security sandboxing and optimized startup performance",
+      "Use virtual machines instead"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement WASM runtimes (Wasmtime/WasmEdge) as container runtimes, configure WASM-specific scheduling policies, implement security sandboxing with WASM, optimize startup performance, integrate with existing container ecosystems, and monitor WASM workload performance.",
+    "reference_url": "https://kubernetes.io/docs/concepts/containers/runtime-class/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a quantum computing integration platform for hybrid classical-quantum workloads?",
+    "options": [
+      "Use classical computing only",
+      "Implement quantum simulator deployments with specialized resource scheduling and hybrid workflows",
+      "Use external quantum services only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement quantum simulator deployments, create quantum job scheduling with specialized resources, integrate with quantum cloud services, implement hybrid workflow orchestration, manage quantum circuit deployment and versioning, and monitor quantum job execution.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/job/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement blockchain node deployment and management with consensus participation?",
+    "options": [
+      "Use external blockchain services",
+      "Deploy blockchain nodes with StatefulSets, manage consensus networking and data persistence",
+      "Manual blockchain deployment"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Deploy blockchain nodes with StatefulSets, implement consensus network connectivity, manage blockchain data persistence, implement node monitoring and health checks, handle blockchain network upgrades, implement security for private keys, and monitor consensus participation.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a multi-cluster operator for workload distribution with intelligent scheduling across geographic regions?",
+    "options": [
+      "Use single cluster deployments",
+      "Implement multi-cluster controller with intelligent placement algorithms and failure handling",
+      "Manual multi-cluster management"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement multi-cluster controller with cluster discovery, create intelligent workload placement algorithms, implement cross-cluster networking, handle cluster failures and workload migration, implement global load balancing, monitor cluster health and performance, and maintain workload consistency.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement a custom admission controller for advanced policy enforcement with external system integration?",
+    "options": [
+      "Use built-in policies only",
+      "Create webhook controller with mutation/validation logic and external integration",
+      "Manual policy enforcement"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Create webhook admission controller with mutation and validation logic, implement external system integration for policy decisions, handle certificate management and rotation, implement policy caching for performance, create policy audit trails, handle admission controller failures gracefully, and maintain policy consistency.",
+    "reference_url": "https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you develop a custom scheduler extension for specialized workloads with complex placement constraints?",
+    "options": [
+      "Use default scheduler only",
+      "Implement scheduler framework plugins with custom filter and score functions",
+      "External scheduling systems only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement scheduler framework plugins, create custom filter and score functions, implement resource topology awareness, handle complex constraint solving, integrate with external scheduling systems, monitor scheduling performance and decisions, and implement scheduling policy versioning.",
+    "reference_url": "https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a custom CNI plugin for specialized networking with SR-IOV and DPDK?",
+    "options": [
+      "Use basic CNI plugins only",
+      "Implement CNI specification with SR-IOV virtual function allocation and DPDK integration",
+      "External networking solutions only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement CNI specification with IPAM integration, handle SR-IOV virtual function allocation, implement DPDK userspace networking, optimize for low-latency and high-throughput, integrate with network monitoring, handle network policy enforcement, and maintain network state consistency.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement storage tiering and data lifecycle management for large-scale data processing?",
+    "options": [
+      "Use single storage tier",
+      "Use multiple StorageClasses with automated data movement and lifecycle policies",
+      "Manual data management"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use multiple StorageClasses for different tiers (SSD/HDD/archive), implement data lifecycle policies with CSI drivers, use operators for automated data movement, implement compression/deduplication, monitor storage costs and usage patterns, and integrate with cloud storage services.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/storage-classes/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement shared storage solutions for HPC workloads with parallel filesystems?",
+    "options": [
+      "Use standard block storage",
+      "Deploy parallel filesystems with CSI drivers and RDMA networking optimization",
+      "Use cloud storage only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Deploy parallel filesystems (Lustre/BeeGFS/GlusterFS) using CSI drivers, implement RDMA networking with SR-IOV, optimize kernel bypass technologies, configure high-performance storage backends, implement job scheduling with storage affinity, and monitor I/O performance.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/volumes/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a data protection strategy for multi-cloud deployments with encryption and compliance?",
+    "options": [
+      "Use basic encryption only",
+      "Implement encryption at rest with external key management and compliance frameworks",
+      "Cloud provider security only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement encryption at rest with CSI driver integration, use external key management services (Vault/cloud KMS), implement secrets management with rotation, ensure compliance with data sovereignty requirements, implement audit trails, and create data classification policies.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you optimize storage performance for database workloads with local storage and I/O prioritization?",
+    "options": [
+      "Use network storage only",
+      "Use local SSDs with I/O prioritization, NUMA-aware scheduling, and dedicated node pools",
+      "Standard storage configuration"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use local SSDs with local storage provisioner, implement I/O prioritization with cgroups, configure NUMA-aware scheduling, optimize filesystem parameters, implement storage QoS, monitor disk I/O patterns, and use dedicated node pools for database workloads.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/volumes/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a secrets management strategy with external stores and automatic rotation?",
+    "options": [
+      "Use Kubernetes secrets only",
+      "Integrate with external secret stores using CSI drivers with automatic rotation",
+      "Manual secret management"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Integrate with external secret stores (Vault/AWS Secrets Manager), use secret store CSI driver or external-secrets operator, implement automatic secret rotation, handle application restart coordination, implement break-glass access procedures, and monitor secret access patterns.",
+    "reference_url": "https://kubernetes.io/docs/concepts/configuration/secret/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement compliance frameworks (SOC2, HIPAA, PCI-DSS) with audit logging and evidence collection?",
+    "options": [
+      "Use basic logging only",
+      "Enable comprehensive audit logging with compliance reporting and automated evidence collection",
+      "Manual compliance tracking"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Enable comprehensive audit logging, implement log aggregation and retention, create compliance reporting dashboards, implement resource tagging for data classification, use policy-as-code for compliance enforcement, conduct regular compliance assessments, and maintain audit trails.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement runtime security monitoring with anomaly detection and threat hunting?",
+    "options": [
+      "Use static security scans only",
+      "Deploy runtime security tools with behavioral analysis and automated incident response",
+      "Manual security monitoring"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Deploy runtime security tools (Falco/Sysdig), implement behavioral analysis for anomaly detection, create threat hunting workflows, integrate with SIEM systems, implement automated incident response, monitor system calls and network behavior, and create security playbooks.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a secure build and deployment pipeline with supply chain security and SLSA compliance?",
+    "options": [
+      "Basic CI/CD pipeline only",
+      "Implement secure base images, image signing, SBOMs, and SLSA provenance",
+      "Manual deployment process"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement secure base images, use multi-stage builds, implement image signing with cosign/notary, create SBOMs (Software Bill of Materials), implement SLSA provenance, use admission controllers for signature verification, and implement software supply chain security policies.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement a custom resource scheduling system for GPU clusters with gang scheduling?",
+    "options": [
+      "Use default GPU scheduling",
+      "Use scheduler plugins with GPU awareness, gang scheduling, and resource optimization",
+      "External GPU management only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use scheduler plugins for GPU awareness, implement gang scheduling for multi-GPU jobs, create priority classes with preemption policies, implement bin-packing algorithms for resource optimization, monitor GPU utilization and fragmentation, and integrate with job queueing systems.",
+    "reference_url": "https://kubernetes.io/docs/concepts/scheduling-eviction/scheduling-framework/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design workload placement for edge computing with latency constraints and intermittent connectivity?",
+    "options": [
+      "Use cloud-only deployment",
+      "Implement edge-aware scheduling with latency metrics and disconnected operations handling",
+      "Manual edge deployment"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement edge-aware scheduling with latency metrics, use node affinity for geographic placement, implement resource overcommitment strategies, handle disconnected operations with local caches, implement workload migration for connectivity changes, and monitor edge node health.",
+    "reference_url": "https://kubernetes.io/docs/concepts/scheduling-eviction/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a resource federation system across multiple clusters with workload distribution?",
+    "options": [
+      "Use single cluster only",
+      "Implement cluster federation with cross-cluster scheduling and service discovery",
+      "Manual multi-cluster management"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement cluster federation with Admiral/Liqo, create cross-cluster workload scheduling, implement service discovery across clusters, handle network partitions and cluster failures, implement resource aggregation and reporting, and maintain consistent policy enforcement.",
+    "reference_url": "https://kubernetes.io/docs/concepts/cluster-administration/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a chaos engineering framework with failure injection and automated recovery validation?",
+    "options": [
+      "Manual testing only",
+      "Implement Chaos Mesh/Litmus with controlled experiments and automated validation",
+      "External testing tools only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement Chaos Mesh/Litmus for failure injection, create chaos experiments with controlled blast radius, implement automated hypothesis validation, monitor system resilience metrics, create chaos engineering culture and practices, and integrate with CI/CD for continuous testing.",
+    "reference_url": "https://kubernetes.io/docs/concepts/workloads/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you implement performance profiling and optimization for containerized applications with CPU, memory, and I/O analysis?",
+    "options": [
+      "Basic monitoring only",
+      "Use profiling tools with continuous profiling and performance regression detection",
+      "Manual performance analysis"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Use profiling tools (pprof/async-profiler), implement continuous profiling with Pyroscope/Parca, analyze resource usage patterns, implement performance testing frameworks, monitor application latency and throughput, optimize JVM/runtime configurations, and implement performance regression detection.",
+    "reference_url": "https://kubernetes.io/docs/tasks/debug-application-cluster/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a capacity planning system with predictive analytics and automated scaling decisions?",
+    "options": [
+      "Manual capacity planning",
+      "Implement metrics collection with machine learning for prediction and automated recommendations",
+      "Static resource allocation"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement metrics collection and analysis, use machine learning for resource prediction, create capacity planning dashboards, implement automated scaling recommendations, monitor resource trends and seasonality, integrate with business planning processes, and maintain cost-performance optimization.",
+    "reference_url": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How do you design a self-service platform with automated provisioning, policy enforcement, and cost allocation?",
+    "options": [
+      "Manual provisioning only",
+      "Implement Infrastructure as Code with developer portals and automated policy enforcement",
+      "Basic self-service tools"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Implement Infrastructure as Code with Crossplane/Terraform, create developer portals with Backstage, implement policy as code with OPA, create automated CI/CD pipelines, implement cost allocation and chargeback, provide self-service debugging tools, and maintain platform SLAs.",
+    "reference_url": "https://kubernetes.io/docs/concepts/extend-kubernetes/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the difference between ArgoCD's 'Application of Applications' pattern and traditional monolithic GitOps deployments?",
+    "options": [
+      "No difference, same concept",
+      "App of Apps enables hierarchical management and better separation of concerns",
+      "App of Apps is only for multi-cluster scenarios",
+      "Traditional deployments are faster"
+    ],
+    "correct_option_index": 1,
+    "explanation": "The Application of Applications pattern allows for better organization, separation of concerns, and hierarchical management of applications and infrastructure components.",
+    "reference_url": "https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "In Istio, what is the purpose of SPIFFE/SPIRE integration for workload identity?",
+    "options": [
+      "Load balancing",
+      "Zero-trust workload identity and attestation",
+      "Traffic routing",
+      "Observability"
+    ],
+    "correct_option_index": 1,
+    "explanation": "SPIFFE/SPIRE provides cryptographic workload identity and attestation, enabling zero-trust security models in service mesh environments.",
+    "reference_url": "https://istio.io/latest/docs/ops/integrations/spire/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How does Cilium's eBPF-based networking differ from traditional iptables-based CNIs in terms of performance?",
+    "options": [
+      "No performance difference",
+      "eBPF provides kernel-bypass networking with microsecond latency",
+      "iptables is faster",
+      "Only works with specific hardware"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Cilium's eBPF implementation operates at the kernel level, providing significant performance improvements over iptables-based solutions.",
+    "reference_url": "https://docs.cilium.io/en/stable/overview/intro/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the 'tenant-as-a-service' pattern in Kubernetes multi-tenancy architectures?",
+    "options": [
+      "One tenant per cluster",
+      "Dynamic tenant provisioning with automated namespace and policy creation",
+      "Manual tenant management",
+      "Single tenant only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Tenant-as-a-service provides automated provisioning, configuration, and lifecycle management of tenant environments.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How does OpenTelemetry's context propagation work across Kubernetes service boundaries?",
+    "options": [
+      "Uses HTTP headers only",
+      "Automatic injection via service mesh",
+      "Context propagation through trace context headers and baggage",
+      "Not supported"
+    ],
+    "correct_option_index": 2,
+    "explanation": "OpenTelemetry uses W3C trace context headers and baggage to propagate distributed tracing context across service boundaries.",
+    "reference_url": "https://opentelemetry.io/docs/instrumentation/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the purpose of CSI volume snapshots in Kubernetes disaster recovery scenarios?",
+    "options": [
+      "Backup only",
+      "Point-in-time recovery and application-consistent backups",
+      "Performance optimization",
+      "Storage migration"
+    ],
+    "correct_option_index": 1,
+    "explanation": "CSI snapshots enable point-in-time recovery and can be integrated with backup solutions for application-consistent disaster recovery.",
+    "reference_url": "https://kubernetes.io/docs/concepts/storage/volume-snapshots/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How does the Topology Aware Hints feature in Kubernetes optimize service routing?",
+    "options": [
+      "Random distribution",
+      "Routes traffic to endpoints in the same topology zone when possible",
+      "Always uses closest endpoint",
+      "Ignores topology"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Topology Aware Hints attempts to keep traffic within the same topology zone to reduce latency and cross-zone bandwidth costs.",
+    "reference_url": "https://kubernetes.io/docs/concepts/services-networking/topology-aware-hints/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the difference between Pod Security Policy (deprecated) and Pod Security Standards?",
+    "options": [
+      "No difference",
+      "PSS is built into the API server and uses labels for enforcement",
+      "PSP is newer",
+      "PSS only works with specific runtimes"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Pod Security Standards are built into the API server and use namespace labels for enforcement, replacing the deprecated Pod Security Policy.",
+    "reference_url": "https://kubernetes.io/docs/concepts/security/pod-security-standards/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the role of the Management Cluster in Cluster API architecture?",
+    "options": [
+      "Runs workloads",
+      "Manages the lifecycle of workload clusters using Kubernetes APIs",
+      "Provides storage",
+      "Handles networking only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "The Management Cluster uses Kubernetes APIs and controllers to manage the entire lifecycle of workload clusters.",
+    "reference_url": "https://cluster-api.sigs.k8s.io/user/concepts.html",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How does the Volcano scheduler improve batch job scheduling compared to the default Kubernetes scheduler?",
+    "options": [
+      "No improvement",
+      "Gang scheduling and advanced queuing for batch workloads",
+      "Only for web applications",
+      "Simpler configuration"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Volcano provides gang scheduling, fair-share queuing, and other features specifically designed for batch and ML workloads.",
+    "reference_url": "https://volcano.sh/en/docs/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What advantage does the Gateway API provide over traditional Ingress resources?",
+    "options": [
+      "Simpler configuration",
+      "Role-oriented, portable, and more expressive for complex traffic management",
+      "Better performance",
+      "Requires fewer resources"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Gateway API provides role-oriented design, portability across implementations, and more expressive capabilities for advanced traffic management.",
+    "reference_url": "https://gateway-api.sigs.k8s.io/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How does Falco detect runtime security anomalies in Kubernetes?",
+    "options": [
+      "Log analysis only",
+      "eBPF-based system call monitoring with custom rules",
+      "Network monitoring",
+      "Image scanning"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Falco uses eBPF to monitor system calls and kernel events, applying custom rules to detect runtime security threats.",
+    "reference_url": "https://falco.org/docs/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the 'Off' mode in VPA and when would you use it?",
+    "options": [
+      "Disables VPA completely",
+      "Provides recommendations without automatically applying changes",
+      "Only scales down",
+      "Emergency mode"
+    ],
+    "correct_option_index": 1,
+    "explanation": "VPA 'Off' mode provides resource recommendations without automatically updating pod specifications, useful for analysis and gradual adoption.",
+    "reference_url": "https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How does Velero handle cross-cloud disaster recovery scenarios?",
+    "options": [
+      "Not supported",
+      "Uses object storage and CSI snapshots for portable backups across cloud providers",
+      "Cloud-specific only",
+      "Requires identical infrastructure"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Velero stores backups in object storage and uses CSI snapshots, enabling restoration across different cloud providers and environments.",
+    "reference_url": "https://velero.io/docs/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the purpose of Argo Workflows integration in Kubeflow Pipelines?",
+    "options": [
+      "UI enhancement",
+      "Workflow orchestration and DAG execution for ML pipelines",
+      "Data storage",
+      "Model serving only"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Argo Workflows provides the workflow engine for Kubeflow Pipelines, handling DAG execution and complex ML workflow orchestration.",
+    "reference_url": "https://www.kubeflow.org/docs/components/pipelines/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What makes K3s suitable for edge computing compared to full Kubernetes?",
+    "options": [
+      "No difference",
+      "Reduced resource footprint, single binary, and simplified deployment",
+      "Better security only",
+      "Different API"
+    ],
+    "correct_option_index": 1,
+    "explanation": "K3s is optimized for edge environments with reduced resource requirements, single binary distribution, and simplified operational model.",
+    "reference_url": "https://k3s.io/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How can Kubernetes resource quotas be integrated with cloud billing for FinOps practices?",
+    "options": [
+      "Not possible",
+      "Using namespace-based cost allocation and resource tagging",
+      "Manual tracking only",
+      "Separate billing systems"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Resource quotas combined with namespace organization and resource tagging enable granular cost allocation and FinOps practices.",
+    "reference_url": "https://kubernetes.io/docs/concepts/policy/resource-quotas/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the difference between validation and mutation in OPA Gatekeeper?",
+    "options": [
+      "Same functionality",
+      "Validation enforces policies while mutation automatically modifies resources to comply",
+      "Mutation is newer only",
+      "Different languages"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Gatekeeper validation enforces policies by rejecting non-compliant resources, while mutation automatically modifies resources to make them compliant.",
+    "reference_url": "https://open-policy-agent.github.io/gatekeeper/website/docs/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How does SLSA (Supply Chain Levels for Software Artifacts) integrate with Kubernetes deployments?",
+    "options": [
+      "Not related",
+      "Provides framework for software supply chain security including container signing and provenance",
+      "Only for source code",
+      "UI framework"
+    ],
+    "correct_option_index": 1,
+    "explanation": "SLSA provides a framework for securing the software supply chain, including container image signing, provenance tracking, and build security.",
+    "reference_url": "https://slsa.dev/",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the difference between Litmus's chaos experiments and simple pod deletion?",
+    "options": [
+      "No difference",
+      "Litmus provides hypothesis-driven chaos engineering with observability and automated rollback",
+      "Pod deletion is more advanced",
+      "Different tools entirely"
+    ],
+    "correct_option_index": 1,
+    "explanation": "Litmus provides structured chaos engineering with hypothesis testing, observability, automated rollback, and comprehensive experiment management.",
+    "reference_url": "https://litmuschaos.io/",
     "difficulty": "advanced"
   }
 ]
